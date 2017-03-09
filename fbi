@@ -1,0 +1,22 @@
+#!/usr/local/bin/python
+from sys import path
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
+
+installer = "/usr/local/lib/fbi/"
+# path.append("/home/freebsd/fbi/src/")
+path.append(installer)
+
+from fbiWindow import MainWindow
+import os
+import shutil
+
+
+def main():
+    Gtk.main()
+    return 0
+
+if __name__ == "__main__":
+    MainWindow()
+    main()
